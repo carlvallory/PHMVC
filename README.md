@@ -8,6 +8,8 @@
     3. Search engine integrated
     4. CMS ready.
     5. PDO Layer
+    6. Display forms faster!
+    7. Modular Components
     
 ## What it is going to have
     1. Chat system integrated
