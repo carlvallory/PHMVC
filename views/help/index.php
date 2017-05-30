@@ -7,5 +7,5 @@
  */
 
 ?>
-
-<?php echo $this->msg; ?>
+    help page
+<?php //echo $this->msg; ?>

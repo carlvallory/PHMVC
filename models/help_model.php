@@ -12,5 +12,7 @@ class Help_Model extends Model {
         echo 'Help model<br>';
     }
     
-    
+    function blah() {
+        return 10 + 10;
+    }
 }

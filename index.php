@@ -1,17 +1,25 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*
+ * https://github.com/carlvallory/PMVC
+ * v 0.2
+ * License: Mozilla Public License 2.0
  */
 
 /* Auto-Loader */
-require 'libs/Bootstrap.php';
+require 'libs/Routes.php';
 require 'libs/Controller.php';
 require 'libs/Model.php';
 require 'libs/View.php';
 
-$app = new Bootstrap();
+/* Library */
+require 'libs/Database.php';
+require 'libs/Session.php';
+
+/* Configs */
+require 'config/paths.php';
+require 'config/database.php';
+
+$app = new Routes();
 
 ?>

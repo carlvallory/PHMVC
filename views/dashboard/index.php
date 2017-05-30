@@ -8,9 +8,4 @@
 
 ?>
 
-    </div>
-    <div id="footer">
-        &copy; footer
-    </div>
-</body>
-</html>
+Dashboard... Logged in only..
