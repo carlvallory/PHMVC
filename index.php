@@ -6,19 +6,20 @@
  * License: Mozilla Public License 2.0
  */
 
+require_once 'autoload.php';
+$libs = array();
+$configs = array();
 /* Auto-Loader */
-require 'libs/Routes.php';
-require 'libs/Controller.php';
-require 'libs/Model.php';
-require 'libs/View.php';
+array_push($libs, 'Routes','Controller','Model','View');
 
 /* Library */
-require 'libs/Database.php';
-require 'libs/Session.php';
+array_push($libs, 'Database','Session');
 
 /* Configs */
-require 'config/paths.php';
-require 'config/database.php';
+array_push($configs, 'paths','database');
+
+loadLib($libs);
+loadConfig($configs);
 
 $app = new Routes();
 

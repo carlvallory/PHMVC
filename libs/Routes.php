@@ -60,4 +60,17 @@ class Routes {
 
 }
 
+class Route
+{
+    /*
+    * Builds a collection of internal URL's to loof for
+    * @param type $uri
+    */
+    private $_uri = array();
+
+    public function add($uri){
+        $this->_uri[] = $uri;
+    }
+}
+
 ?>
