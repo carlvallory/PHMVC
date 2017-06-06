@@ -1,10 +1,13 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**
+ * dashboard 
+ * Model-View-Controller File
+ * 
+ * @package MVC
+ * @subpackage Controller
+ * @author Carlos Vallory <carlvallory@gmail.com>
+ **/
 
 class Dashboard extends Controller {
     
@@ -27,7 +30,7 @@ class Dashboard extends Controller {
     
     function logOut(){
         Session::destroy();
-        header('location: ../login');
+        header('location: '. URL .'login');
         exit;
     }
     

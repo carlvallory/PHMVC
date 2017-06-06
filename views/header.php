@@ -1,10 +1,13 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**
+ * header
+ * Model-View-Controller File
+ * 
+ * @package MVC
+ * @subpackage View
+ * @author Carlos Vallory <carlvallory@gmail.com>
+ **/
 
 ?>
 <!doctype html>
@@ -31,21 +34,19 @@
         Session::init();
         ?>
         <div id="header">
-            header
-            <br/>
+            
+            <?php if(Session::get('loggedIn') == false):?>
             <a href="<?=URL;?>index">Index</a>
-            <a href="<?=URL;?>dashboard">Dashboard</a>
             <a href="<?=URL;?>help">Help</a>
-            <?php
-                if(Session::get('loggedIn') == true){
-            ?>
+            <?php endif; ?>
+            <?php if(Session::get('loggedIn') == true): ?>
+                <a href="<?=URL;?>dashboard">Dashboard</a>
+                <?php if(Session::get('role') == 'owner'): ?>
+                    <a href="<?=URL;?>user">Users</a>
+                <?php endif; ?>
                 <a href="<?=URL;?>dashboard/logout">Logout</a>
-            <?php
-                }else{
-            ?>
+            <?php else: ?>
                 <a href="<?=URL;?>login">Login</a>
-            <?php
-                }
-            ?>
+            <?php endif; ?>
         </div>
         <div id="content">

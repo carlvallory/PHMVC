@@ -1,8 +1,11 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**
+ * dashboard/js/defaul.js
+ * Model-View-Controller js File
+ * 
+ * @package MVC
+ * @subpackage View
+ * @author Carlos Vallory <carlvallory@gmail.com>
+ **/
 
 $(function(){
     $.get("dashboard/xhrGetListings", function(o) {

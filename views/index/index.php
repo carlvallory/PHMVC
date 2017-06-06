@@ -1,10 +1,14 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**
+ * index
+ * Model-View-Controller File
+ * 
+ * @package MVC
+ * @subpackage View
+ * @author Carlos Vallory <carlvallory@gmail.com>
+ **/
+
 ?>
 
 <?php //echo $this->msg; ?>
