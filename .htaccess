@@ -1,5 +1,5 @@
-php_flag display_warnings on
-php_value warning_reporting 9999
+php_flag display_error on
+php_value error_reporting 9999
 
 <IfModule rewrite_module>
 RewriteEngine On

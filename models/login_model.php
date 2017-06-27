@@ -17,8 +17,8 @@ class Login_Model extends Model
     
     public function run(){
         $login = $_POST['login'];
-        $password = $_POST['password'];
-        $sth = $this->db->prepare("SELECT id, role FROM users WHERE login = :login AND password = MD5(:password)");
+        $password = Hash::create(HASH_ALGO, $_POST['password'], HASH_PASSWORD_KEY);
+        $sth = $this->db->prepare("SELECT id, role FROM users WHERE login = :login AND password = :password");
         $sth->execute(array(':login' => $login, ':password' => $password));
         $data = $sth->fetch();
         //$data = $sth->fetchALL();

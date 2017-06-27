@@ -3,17 +3,18 @@
 /**
  * @name Php Model View Controller
  * @link https://github.com/carlvallory/PMVC Github
- * @version 0.0.4
+ * @version 0.0.5
  * @License https://github.com/carlvallory/PMVC/blob/master/LICENSE Mozilla Public License 2.0
  * @author Carlos Vallory <carlvallory@gmail.com>
  **/
 
-class Routes {
-
+class Routes 
+{
     function __construct(){
 
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
+        $url = filter_var($url, FILTER_SANITIZE_URL);
         $url = explode('/', $url);
         
         if(empty($url[0])){

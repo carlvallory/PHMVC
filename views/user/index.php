@@ -13,7 +13,7 @@
 
 <h1>User</h1>
 
-<form method="post" action="<?=URL;?>user/create">
+<form method="post" action="<?=baseURL;?>user/create">
     <label>Login</label><input type="text" name="login" />
     <label>Password</label><input type="text" name="password" />
     <label>Role</label>
@@ -32,8 +32,8 @@
         echo '<td>' . $value['login'] . '</td>';
         echo '<td>' . $value['role'] . '</td>';
         echo '<td>'
-            . '<a href="'.URL.'user/edit/'.$value['id'].'">Edit</a>'
-            . '<a href="'.URL.'user/delete/'.$value['id'].'">Delete</a>'
+            . '<a href="'.baseURL.'user/edit/'.$value['id'].'">Edit</a>'
+            . '<a href="'.baseURL.'user/delete/'.$value['id'].'">Delete</a>'
             . '</td>'; 
         echo '</tr>';
     }

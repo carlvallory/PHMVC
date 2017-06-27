@@ -14,7 +14,7 @@
 <h1>User: Edit</h1>
 
 
-<form method="post" action="<?php echo URL;?>user/editSave/<?=$this->user['id'];?>">
+<form method="post" action="<?php echo baseURL;?>user/editSave/<?=$this->user['id'];?>">
     <label>Login</label><input type="text" name="login" value="<?php echo $this->user['login']; ?>" /><br />
     <label>Password</label><input type="text" name="password" /><br />
     <label>Role</label>

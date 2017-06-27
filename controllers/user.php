@@ -23,12 +23,12 @@ class User extends Controller {
     public function create(){
         $data = array();
         $data['login'] = $_POST['login'];
-        $data['password'] = md5($_post['password']);
+        $data['password'] = $_POST['password'];
         $data['role'] = $_POST['role'];
         
         $this->model->create($data);
         
-        header('location: ' . URL . 'user');
+        header('location: ' . baseURL . 'user');
     }
     
     public function edit($id){
@@ -40,18 +40,18 @@ class User extends Controller {
         $data = array();
         $data['id'] = $id;
         $data['login'] = $_POST['login'];
-        $data['password'] = md5($_post['password']);
+        $data['password'] = $_POST['password'];
         $data['role'] = $_POST['role'];
         
         $this->model->editSave($data);
         
-        header('location: ' . URL . 'user');
+        header('location: ' . baseURL . 'user');
     }
     
     public function delete($id)
     {
         $this->model->delete($id);
-        header('location: ' . URL . 'user');
+        header('location: ' . baseURL . 'user');
     }
 }
 
