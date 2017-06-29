@@ -31,7 +31,7 @@ class Val
     }
     
     public function integer($data, $arg = null){
-        if(!ctype_digit($data)){
+        if(ctype_digit($data) == false){
             return "Your string must be a digit.";
         }
     }

@@ -23,6 +23,18 @@ class Form
         $this->_val = $val = new Val();
     }
     
+    public function newForm(){
+        /* TODO */
+    }
+    
+    public function editForm(){
+        /* TODO */
+    }
+    
+    public function delForm(){
+        /* TODO */
+    }
+    
     public function post($field){
         $this->_postData[$field] = $_POST[$field];
         $this->_currentItem = $field;
@@ -56,6 +68,12 @@ class Form
     }
     
     public function submit(){
+        /* TODO */
+        
+        /*
+         * INSERT INTO DATABASE
+         */
+        
         if(empty($this->_error)){
             return true;
         }else{

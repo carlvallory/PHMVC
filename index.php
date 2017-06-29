@@ -16,7 +16,7 @@ $configs = array();
 array_push($classs, 'Routes','Controller','Model','View','Modules');
 
 /* Library */
-array_push($classs, 'Hash','Database','Session');
+array_push($classs, 'Hash','Database','Session','Auth');
 //array_push($classs, 'Val', 'Form');
 array_push($libs, 'functions');
 
